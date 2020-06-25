@@ -2,7 +2,11 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-
+  {
+    path: '',
+    redirectTo: 'saudemental',
+    pathMatch: 'full'
+  },
   {
     path: 'saudemental',
     loadChildren: () => import('./saudemental/saudemental.module').then(m => m.SaudementalPageModule)

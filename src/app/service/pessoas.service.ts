@@ -7,7 +7,13 @@ import { Storage } from '@ionic/storage';
 export class PessoasService {
   async insert(valor) {
     const pessoas: any[] = (await this.storage.get("pessoas"));
-    valor.id = pessoas.length + 1;
+    if (pessoas.length === null || pessoas.length === undefined) {
+      valor.id = 1;
+    }
+    else {
+      valor.id = (pessoas.length || 0) + 1;
+    }
+
     return this.storage.set("pessoas", [...pessoas, valor]);
 
   }

@@ -16,4 +16,10 @@ export class SaudementalPage implements OnInit {
     this.service.insert(form.value);
 
   }
+  manda(form) {
+    console.log(this.service.getByid(form.value.id));
+  }
+  mandar(form) {
+    console.log(this.service.getRacaCor(form.value.racaCor));
+  }
 }
