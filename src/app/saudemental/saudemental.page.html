@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>saudemental</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-form #formulario="ngForm" onSubmit="enviar(formulario)">
+          <!-- <form (ngSubmit)="logForm()"> -->
+          <ion-item>
+
+            <ion-label>Nome</ion-label>
+            <ion-input type="text" name="nome" [(ngModel)]=""></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>idade</ion-label>
+            <ion-input type="number" name="idade" [(ngModel)]=""></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Saúde Mental</ion-label>
+            <ion-input type="text" name="saudeMental" [(ngModel)]=""></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Raça/Cor</ion-label>
+            <ion-input type="text" name="racaCor" [(ngModel)]=""></ion-input>
+          </ion-item>
+          <ion-button type="submit" color="primary" block>Criar Pessoa</ion-button>
+          <!-- </form> -->
+        </ion-form>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-button type="submit" color="secondary" (click)="SearchId()" block>Buscar id</ion-button>
+      <ion-button type="submit" color="tertiary" (click)="SearchCor()" block>Buscar por Raça/Cor</ion-button>
+    </ion-row>
+  </ion-grid>
+</ion-content>
